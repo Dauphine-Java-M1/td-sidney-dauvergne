@@ -1,5 +1,7 @@
 Sidney Dauvergne
 
+TD00-maven
+
 Exercice 1
 
 4) 3.6.0
@@ -25,6 +27,16 @@ Exercice 3
 6) Il nous propose de créer la méthode getToto(); pour set, il nous propose de créer la méthode setToto().
 
 7) Une nouvelle fenêtre s'ouvre: open resource, afin d'ouvrir une ressource dont le nom commence par "App" telle que Apptest.java par exemple. Il se passe la même chose pour Toto. Cependant, dans ce cas là, il n'y a aucun "matching item".
+
+TD00bis-git
+
+Exercice 1
+
+2) Il y a le fichier PrimeCollection.java et le fichier REPONSES.txt. Les fichiers qui ne font pas partie des sources du projet sont par exemple PrimeCollectionTest.java ou encore PrimeCollection.class.
+
+5) On observe l'affichage de la partie qui a été modifiée avec, en rouge la ligne avant modification et en vert celle après modification.
+
+8) Le hash de mon premier commit (Initial import) est bc2132060479ec27129a62e3add24f4d9b790b4b.
 
 
 
