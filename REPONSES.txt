@@ -39,6 +39,15 @@ Exercice 1
 
 8) Le hash de mon premier commit (Initial import) est bc2132060479ec27129a62e3add24f4d9b790b4b.
 
+Exercice 2
+
+5) Une erreur s'affiche: "impossible de pousser des références vers 'https://github.com/Dauphine-Java-M1/td-sidney-dauvergne'
+astuce: Les mises à jour ont été rejetées car la branche distante contient du travail que
+astuce: vous n'avez pas en local. Ceci est généralement causé par un autre dépôt poussé
+astuce: vers la même référence. Vous pourriez intégrer d'abord les changements distants
+astuce: (par exemple 'git pull ...') avant de pousser à nouveau."
+
+
 fin
 
 
