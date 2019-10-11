@@ -38,6 +38,6 @@ Exercice 1
 
 8) Le hash de mon premier commit (Initial import) est bc2132060479ec27129a62e3add24f4d9b790b4b.
 
-
+je suis dans javaavance
 
 
