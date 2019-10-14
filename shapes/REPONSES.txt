@@ -20,4 +20,12 @@ Exercice 1:
 
 8) Il sait quel constructeur appeler par rappoort au nombre d'arguments et aux types des arguments.
 
+9) J'ai redéfini la ùéthode toString de la classe Objet.
 
+Exercice 2:
+
+1) Il affiche true puis false. En effet, p1 et p2 ont la même référence donc c'est true mais p1 et p3 sont des points qui ont les mêmes coordonnées mais pas la même référence. Voilà pourquoi le résultat est false. 
+
+3) La méthode retourne un entier. En effet, elle retourne la première occurrence de l'élément spécifié dans la liste. Elle retourne -1 si l'elément n'existe pas dans la liste. La réponse est ici -1 pour p3, ce qui est correct puisque l'élément ne se trouve pas dans la liste. En revanche, le résultat est 0 pour p2. En effet, p1 et p2 ont la même référence, donc la méthode renvoie l'indice de p1 dans la liste.
+
+MODIFICATION CLASSE POINT ?

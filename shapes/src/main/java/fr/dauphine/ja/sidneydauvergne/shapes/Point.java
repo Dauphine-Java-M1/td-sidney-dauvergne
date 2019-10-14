@@ -24,19 +24,26 @@ public class Point {
 		return "("+x+","+y+")";
 	}
 	
+	boolean isSameAs(Point p) {
+		if (this.x==p.x && this.y==p.y) {
+			return true;
+		}
+		return false;
+	}
+	
     public static void main( String[] args )
     {
         Point p1 = new Point(1,2);
         Point p2=p1;
-        Point p3= new Point(1,2);
+        Point p3= new Point(1,3);
         
-        System.out.println(p1==p2);
-        System.out.println(p1==p3);
+        System.out.println(p1.isSameAs(p2));
+        System.out.println(p1.isSameAs(p3));
         
-        /*ArrayList<Point> list = new ArrayList<>();
+        ArrayList<Point> list = new ArrayList<Point>();
         list.add(p1);
         System.out.println(list.indexOf(p2));
-        System.out.println(list.indexOf(p3));*/
+        System.out.println(list.indexOf(p3));
         
     }
 }
