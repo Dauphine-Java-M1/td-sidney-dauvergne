@@ -18,8 +18,8 @@ public class PrimeCollection
 		//System.out.println(numbers);
 	}
 	
-	private boolean isPrime(int p) {
-		if(p==2) {
+	public static boolean isPrime(int p) {
+		if(p==0) {
 			return false;
 		}
 		int i=2;
