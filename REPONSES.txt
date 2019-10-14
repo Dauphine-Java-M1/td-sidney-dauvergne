@@ -48,4 +48,9 @@ astuce: (par exemple 'git pull ...') avant de pousser à nouveau."
 
 6) Il contient les modifications apportées depuis clone-de-javaavance et qui ont été déposées sur github, ainsi que les modifications apportées en local depuis javaavance.
 
+Exercice 3
+
+2) assertTrue permet de vérifier que le résultat de la méthode testée ou du test effectué est bien true. Si on a true dans assertTrue, alors le test sera correct et un ecande verte apparaitre. au contraire, si le este est faux, une bande rouge apparaitra, signifiant que le est a échoué. Il en va de la même manière pour assertFalse, le but étant ici de vérifer que la valeur retournée est bien false.
+
+
 
