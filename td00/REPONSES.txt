@@ -1,0 +1,56 @@
+Sidney Dauvergne
+
+TD00-maven
+
+Exercice 1
+
+4) 3.6.0
+
+6) Il contient les dossiers classes, generated-sources et maven-status
+
+8) Class path=chemin vers la classe compilée ici 
+
+13) On doit lui donner la même valeur que le maven.compiler.source, c'est-à-dire 1.7 ici.
+
+Exercice 2
+
+1) On obtient la phrase suivante: "aucun attribut manifest principal dans target/td00-1.0-SNAPSHOT.jar" car l'execution à partir de l'archive n'a pas été activée.
+
+Exercice 3
+
+3) Il apparait "System.out.println()"
+
+4) Il nou propose de créer la classe toString
+
+5) la ligne de création de la méthode main apparait
+
+6) Il nous propose de créer la méthode getToto(); pour set, il nous propose de créer la méthode setToto().
+
+7) Une nouvelle fenêtre s'ouvre: open resource, afin d'ouvrir une ressource dont le nom commence par "App" telle que Apptest.java par exemple. Il se passe la même chose pour Toto. Cependant, dans ce cas là, il n'y a aucun "matching item".
+
+TD00bis-git
+
+Exercice 1
+
+2) Il y a le fichier PrimeCollection.java et le fichier REPONSES.txt. Les fichiers qui ne font pas partie des sources du projet sont par exemple PrimeCollectionTest.java ou encore PrimeCollection.class.
+
+5) On observe l'affichage de la partie qui a été modifiée avec, en rouge la ligne avant modification et en vert celle après modification.
+
+8) Le hash de mon premier commit (Initial import) est bc2132060479ec27129a62e3add24f4d9b790b4b.
+
+Exercice 2
+
+5) Une erreur s'affiche: "impossible de pousser des références vers 'https://github.com/Dauphine-Java-M1/td-sidney-dauvergne'
+astuce: Les mises à jour ont été rejetées car la branche distante contient du travail que
+astuce: vous n'avez pas en local. Ceci est généralement causé par un autre dépôt poussé
+astuce: vers la même référence. Vous pourriez intégrer d'abord les changements distants
+astuce: (par exemple 'git pull ...') avant de pousser à nouveau."
+
+6) Il contient les modifications apportées depuis clone-de-javaavance et qui ont été déposées sur github, ainsi que les modifications apportées en local depuis javaavance.
+
+Exercice 3
+
+2) assertTrue permet de vérifier que le résultat de la méthode testée ou du test effectué est bien true. Si on a true dans assertTrue, alors le test sera correct et un ecande verte apparaitre. au contraire, si le este est faux, une bande rouge apparaitra, signifiant que le est a échoué. Il en va de la même manière pour assertFalse, le but étant ici de vérifer que la valeur retournée est bien false.
+
+
+
