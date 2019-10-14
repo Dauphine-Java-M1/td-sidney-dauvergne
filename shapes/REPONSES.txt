@@ -1,0 +1,23 @@
+Sidney Dauvergne
+
+Reponses du TD1- encapsMuta
+
+Exercice 1:
+
+1) Cela fonctionne car un constructeur par défaut a été crée automatiquement.
+
+2) Cela ne fonctionne pas car les variables x et y n'ont pas été déclarées. On pourrait penser que les variables x et y seraient celles de la classe Point puisqu'on est dans le même package. Dans ce cas, ce n'est pas possible car les variables x et y de la classe Point sont deux champs privés. pour que cela fonctionne, il faudrait les déclarer en protected ou en public.
+
+3) Il faut qu'ils soient privés pour éviter des conflits. Par exemple, dans ce cas-ci, testpoint pourrait apporter une modification à x et y sans que Point ne le sache et n'attende de modification. Il pourrait par la suite y avoir de nombreux problèmes à l'execution.
+
+4) Un accesseur est une méthode qui permet d'accéder ou de modifier un champs private. Il y a les setteurs et les getteurs. Ici, on n'a besoin que d'accéder aux valeurs private de la classe Point. On va donc utiliser get().
+
+5) Le problème peut être dans le fait que: dans le main, on appelle un constructeur par défaut alors que, en créant un constructeur avce 2 arguments, on "supprime" le constructeur par défaut généré automatiquement. Il y a alors 2 options: créer un constructeur par défaut ou appeler le constructeur avec 2 arguments.
+
+6) Il ne faut pas oublier de mettre this pour considérer les variables de l'objet pour éviter toute confusion avec les paramètres.
+
+7) On peut créer une variable static, qu'on incrémente à chaque crétion de nouvel objet Point.
+
+8) Il sait quel constructeur appeler par rappoort au nombre d'arguments et aux types des arguments.
+
+
