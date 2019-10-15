@@ -36,9 +36,8 @@ public class Point {
 		return false;
 	}
 	
-	void translate(int dx, int dy) {
-		this.x=dx;
-		this.y=dy;
+	public Point translate(int dx, int dy) {
+		return new Point(dx,dy);
 	}
 	
     public static void main( String[] args )

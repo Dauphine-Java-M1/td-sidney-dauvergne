@@ -42,4 +42,16 @@ Exercice 4:
 
 1) La méthode peut renvoyer un nouveau point qui correspond à la translation du point initial ou ne rien renvoyer et modifier le point tel que ses nouvelles coordonnées soient dx et dy.
 
+5) Quand on affiche c, on remarque que p a également été modifié alors qu'on n'a translaté que le cercle c2 et pas c. Les coordonnées de p ne devraient donc pas avoir pris. Il faut alors renvoyer un nouveau point lorsqu'on effectue la translation du point.
+
+6) Dasn le cas de l'exemple donné, le résultat affiché est (1,2) pour le centre alors qu'on souhaitait (1,1) après translation. Autrement dit, on récupère la valeur et ce point est translaté mais le cercle n'a pas été translaté puisque c'est la méthode translate de la classe Point qui a été appelée et cela n'a pas modifié le centre du cercle.
+
+MODIFICATION ??
+
+QUESTION 8 ET 9
+
+Exercice 5:
+
+1) Oui car il s'agit d'un cas spécial de cercle, avec une variable de plus. 
+
 
