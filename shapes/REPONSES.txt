@@ -29,3 +29,11 @@ Exercice 2:
 3) La méthode retourne un entier. En effet, elle retourne la première occurrence de l'élément spécifié dans la liste. Elle retourne -1 si l'elément n'existe pas dans la liste. La réponse est ici -1 pour p3, ce qui est correct puisque l'élément ne se trouve pas dans la liste. En revanche, le résultat est 0 pour p2. En effet, p1 et p2 ont la même référence, donc la méthode renvoie l'indice de p1 dans la liste.
 
 MODIFICATION CLASSE POINT ?
+
+Exercice 3:
+
+2) Si on essaye d'insérer un point alors que le tableau est plein, on aura une exception de type "ArrayIndexoutOfBound". Pour résoudre cela, il faudrait connaitre le nombre de points déjà insérés dans le tableau et comparer à la taille du tableau. Il est possible de faire cela à l'aide d'une variable ou d'une méthode.
+
+5) On obtient une exception de type "NullPointerException. On obtient le même problème.
+
+6) pointCapacity n'a plus de raison d'exister. En effet, les nouveaux éléments de type Point seront ajoutés à la suite, il n'y a pas de capacité maximum, c'est-à-dire de taille prédéfinie. nbPoints n'a plus de raison d'exister non plus. En effet, il suffit d'utiliser la méthode size prédéfinie pour connaitre la taille de la liste et ainsi le nombre d'éléments contenus dans la liste. Il en va de même pour contains car une méthode contains existe déjà dans java.
