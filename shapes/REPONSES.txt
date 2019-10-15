@@ -37,3 +37,9 @@ Exercice 3:
 5) On obtient une exception de type "NullPointerException. On obtient le même problème.
 
 6) pointCapacity n'a plus de raison d'exister. En effet, les nouveaux éléments de type Point seront ajoutés à la suite, il n'y a pas de capacité maximum, c'est-à-dire de taille prédéfinie. nbPoints n'a plus de raison d'exister non plus. En effet, il suffit d'utiliser la méthode size prédéfinie pour connaitre la taille de la liste et ainsi le nombre d'éléments contenus dans la liste. Il en va de même pour contains car une méthode contains existe déjà dans java.
+
+Exercice 4:
+
+1) La méthode peut renvoyer un nouveau point qui correspond à la translation du point initial ou ne rien renvoyer et modifier le point tel que ses nouvelles coordonnées soient dx et dy.
+
+

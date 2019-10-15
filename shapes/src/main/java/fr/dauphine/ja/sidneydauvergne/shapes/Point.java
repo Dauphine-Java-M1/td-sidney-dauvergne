@@ -20,6 +20,11 @@ public class Point {
 		this.y=p.y;
 	}
 	
+	Point(){
+		this.x=0;
+		this.y=0;
+	}
+	
 	public String toString() {
 		return "("+x+","+y+")";
 	}
@@ -29,6 +34,11 @@ public class Point {
 			return true;
 		}
 		return false;
+	}
+	
+	void translate(int dx, int dy) {
+		this.x=dx;
+		this.y=dy;
 	}
 	
     public static void main( String[] args )
