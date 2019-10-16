@@ -1,11 +1,12 @@
 package fr.dauphine.ja.sidneydauvergne.shapes;
 
 import java.math.*;
+import java.util.*;
 
 public class Circle {
 	
 	Point centre;
-	int r; //rayon
+	int r;
 	
 	Circle(Point c, int r){
 		this.centre=c;
@@ -33,9 +34,22 @@ public class Circle {
 		return Math.PI*this.r*this.r;
 	}
 	
-	/*boolean contains(Point p) {
-		
-	}*/
+	boolean contains(Point p) {
+		int res=(p.getX()-this.centre.getX())*(p.getX()-this.centre.getX())+(p.getY()-this.centre.getY())*(p.getY()-this.centre.getY());
+		if(res<r*r) {
+			return true;
+		}
+		return false;
+	}
+	
+	static boolean contains(Point p, ArrayList<Circle> circles) {
+		for (Circle c: circles) {
+			if (c.contains(p)){
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	public static void main(String[] args) {
 		Point p = new Point(1,2);
@@ -50,6 +64,15 @@ public class Circle {
 		Circle c = new Circle(new Point(1,2),1);
 		c.getCenter().translate(1, 1);
 		System.out.println(c);
+		
+		Point p1 = new Point(3,4);
+		Circle c3 = new Circle(new Point(0,0),5);
+		//System.out.println(c3.contains(p1));
+		
+		ArrayList<Circle> circles = new ArrayList<Circle>();
+		circles.add(c1);
+		circles.add(c3);
+		System.out.println(Circle.contains(new Point(1,2),circles));
 	}
 	
 }

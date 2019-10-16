@@ -26,9 +26,7 @@ Exercice 2:
 
 1) Il affiche true puis false. En effet, p1 et p2 ont la même référence donc c'est true mais p1 et p3 sont des points qui ont les mêmes coordonnées mais pas la même référence. Voilà pourquoi le résultat est false. 
 
-3) La méthode retourne un entier. En effet, elle retourne la première occurrence de l'élément spécifié dans la liste. Elle retourne -1 si l'elément n'existe pas dans la liste. La réponse est ici -1 pour p3, ce qui est correct puisque l'élément ne se trouve pas dans la liste. En revanche, le résultat est 0 pour p2. En effet, p1 et p2 ont la même référence, donc la méthode renvoie l'indice de p1 dans la liste.
-
-MODIFICATION CLASSE POINT ?
+3) La méthode retourne un entier. En effet, elle retourne la première occurrence de l'élément spécifié dans la liste. Elle retourne -1 si l'elément n'existe pas dans la liste. La réponse est ici -1 pour p3 et 0 pour p2. Or, p1, p2 et p3 ont les mêmes coordonées et correspondent donc au même point, même s'il ne s'agit pas des mêmes objets. On aurait donc du obtenir 0 pour p3 également. Le but est donc ici de redéfinir la méthode indexOf à l'aide de la méthode isSameAs.
 
 Exercice 3:
 
@@ -44,19 +42,13 @@ Exercice 4:
 
 5) Quand on affiche c, on remarque que p a également été modifié alors qu'on n'a translaté que le cercle c2 et pas c. Les coordonnées de p ne devraient donc pas avoir pris. Il faut alors renvoyer un nouveau point lorsqu'on effectue la translation du point.
 
-6) Dasn le cas de l'exemple donné, le résultat affiché est (1,2) pour le centre alors qu'on souhaitait (1,1) après translation. Autrement dit, on récupère la valeur et ce point est translaté mais le cercle n'a pas été translaté puisque c'est la méthode translate de la classe Point qui a été appelée et cela n'a pas modifié le centre du cercle.
+6) Dans le cas de l'exemple donné, le résultat affiché est (1,2) pour le centre alors qu'on souhaitait (1,1) après translation. Autrement dit, on récupère la valeur et ce point est translaté mais le cercle n'a pas été translaté puisque c'est la méthode translate de la classe Point qui a été appelée et cela n'a pas modifié le centre du cercle. 
 
-MODIFICATION ??
-
-QUESTION 8 ET 9
+9) Il faut en faire une méthode statique. En effet, comme on a une liste de cercles en argument, on ne va pas appeler la méthode avec un objet instancié.
 
 Exercice 5:
 
 1) Oui car il s'agit d'un cas spécial de cercle, avec une variable de plus. 
-
-4) PROBLEME ?
-
-QUESTIONS 5 et 6
 
 
 
