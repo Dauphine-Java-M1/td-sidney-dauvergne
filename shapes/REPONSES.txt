@@ -1,1 +1,51 @@
 Sidney Dauvergne
+
+Reponses du TD1- encapsMuta
+
+Exercice 1:
+
+1) Cela fonctionne car un constructeur par défaut a été crée automatiquement.
+
+2) Cela ne fonctionne pas car les variables x et y n'ont pas été déclarées. On pourrait penser que les variables x et y seraient celles de la classe Point puisqu'on est dans le même package. Dans ce cas, ce n'est pas possible car les variables x et y de la classe Point sont deux champs privés. pour que cela fonctionne, il faudrait les déclarer en protected ou en public.
+
+3) Il faut qu'ils soient privés pour éviter des conflits. Par exemple, dans ce cas-ci, testpoint pourrait apporter une modification à x et y sans que Point ne le sache et n'attende de modification. Il pourrait par la suite y avoir de nombreux problèmes à l'execution.
+
+4) Un accesseur est une méthode qui permet d'accéder ou de modifier un champs private. Il y a les setteurs et les getteurs. Ici, on n'a besoin que d'accéder aux valeurs private de la classe Point. On va donc utiliser get().
+
+5) Le problème peut être dans le fait que: dans le main, on appelle un constructeur par défaut alors que, en créant un constructeur avce 2 arguments, on "supprime" le constructeur par défaut généré automatiquement. Il y a alors 2 options: créer un constructeur par défaut ou appeler le constructeur avec 2 arguments.
+
+6) Il ne faut pas oublier de mettre this pour considérer les variables de l'objet pour éviter toute confusion avec les paramètres.
+
+7) On peut créer une variable static, qu'on incrémente à chaque crétion de nouvel objet Point.
+
+8) Il sait quel constructeur appeler par rappoort au nombre d'arguments et aux types des arguments.
+
+9) J'ai redéfini la ùéthode toString de la classe Objet.
+
+Exercice 2:
+
+1) Il affiche true puis false. En effet, p1 et p2 ont la même référence donc c'est true mais p1 et p3 sont des points qui ont les mêmes coordonnées mais pas la même référence. Voilà pourquoi le résultat est false. 
+
+3) La méthode retourne un entier. En effet, elle retourne la première occurrence de l'élément spécifié dans la liste. Elle retourne -1 si l'elément n'existe pas dans la liste. La réponse est ici -1 pour p3 et 0 pour p2. Or, p1, p2 et p3 ont les mêmes coordonées et correspondent donc au même point, même s'il ne s'agit pas des mêmes objets. On aurait donc du obtenir 0 pour p3 également. Le but est donc ici de redéfinir la méthode indexOf à l'aide de la méthode isSameAs.
+
+Exercice 3:
+
+2) Si on essaye d'insérer un point alors que le tableau est plein, on aura une exception de type "ArrayIndexoutOfBound". Pour résoudre cela, il faudrait connaitre le nombre de points déjà insérés dans le tableau et comparer à la taille du tableau. Il est possible de faire cela à l'aide d'une variable ou d'une méthode.
+
+5) On obtient une exception de type "NullPointerException. On obtient le même problème.
+
+6) pointCapacity n'a plus de raison d'exister. En effet, les nouveaux éléments de type Point seront ajoutés à la suite, il n'y a pas de capacité maximum, c'est-à-dire de taille prédéfinie. nbPoints n'a plus de raison d'exister non plus. En effet, il suffit d'utiliser la méthode size prédéfinie pour connaitre la taille de la liste et ainsi le nombre d'éléments contenus dans la liste. Il en va de même pour contains car une méthode contains existe déjà dans java.
+
+Exercice 4:
+
+1) La méthode peut renvoyer un nouveau point qui correspond à la translation du point initial ou ne rien renvoyer et modifier le point tel que ses nouvelles coordonnées soient dx et dy.
+
+5) Quand on affiche c, on remarque que p a également été modifié alors qu'on n'a translaté que le cercle c2 et pas c. Les coordonnées de p ne devraient donc pas avoir pris. Il faut alors renvoyer un nouveau point lorsqu'on effectue la translation du point.
+
+6) Dans le cas de l'exemple donné, le résultat affiché est (1,2) pour le centre alors qu'on souhaitait (1,1) après translation. Autrement dit, on récupère la valeur et ce point est translaté mais le cercle n'a pas été translaté puisque c'est la méthode translate de la classe Point qui a été appelée et cela n'a pas modifié le centre du cercle. 
+
+9) Il faut en faire une méthode statique. En effet, comme on a une liste de cercles en argument, on ne va pas appeler la méthode avec un objet instancié.
+
+Exercice 5:
+
+1) Oui car il s'agit d'un cas spécial de cercle, avec une variable de plus. 
