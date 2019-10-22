@@ -2,10 +2,6 @@ package fr.dauphine.ja.sidneydauvergne.shapes;
 
 import java.util.ArrayList;
 
-/**
- * Hello world!
- *
- */
 public class Point {
 	
 	private int x,y;
