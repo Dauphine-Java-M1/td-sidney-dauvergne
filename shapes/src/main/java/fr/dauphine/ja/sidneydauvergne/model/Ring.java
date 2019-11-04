@@ -1,5 +1,6 @@
-package fr.dauphine.ja.sidneydauvergne.shapes;
+package fr.dauphine.ja.sidneydauvergne.model;
 
+import java.awt.Graphics;
 import java.util.*;
 
 public class Ring extends Circle{
@@ -17,7 +18,13 @@ public class Ring extends Circle{
 		}
 	}
 	
-	Ring(){
+	public Ring (Circle c, int rayonI){
+		this.centre = c.centre;
+		this.r = c.r;
+		this.rayonI = rayonI;
+	}
+	
+	public Ring(){
 		this.centre=new Point(0,0);
 		r=0;
 		rayonI=0;
@@ -38,6 +45,17 @@ public class Ring extends Circle{
 		return false;
 	}
 	
+	@Override
+	public void paintComponent(Graphics g) {
+		System.out.println("dans ring");
+		System.out.println("1"+this);
+		int co = (int) Math.cos(45);
+		int si = (int) Math.sin(45);
+		g.drawOval(centre.getX()-co, centre.getY()-si, r, r);
+		System.out.println("2"+this);
+		g.drawOval(centre.getX()-co, centre.getY()-si, rayonI, rayonI);
+	}
+	
 	boolean contains(Point p, ArrayList<Ring> rings) {
 		for (Ring r: rings) {
 			if(r.contains(p)) {
@@ -52,6 +70,7 @@ public class Ring extends Circle{
 		Ring rg= new Ring(p,5,4);
 		Ring rg1 = new Ring(p,6,7);
 		System.out.println(rg);
+		System.out.println(rg1);
 		
 		ArrayList<Ring> rings = new ArrayList<Ring>();
 		rings.add(rg);

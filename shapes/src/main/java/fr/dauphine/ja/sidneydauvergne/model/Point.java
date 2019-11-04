@@ -1,4 +1,4 @@
-package fr.dauphine.ja.sidneydauvergne.shapes;
+package fr.dauphine.ja.sidneydauvergne.model;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Point {
 	
 	private int x,y;
 	
-	Point(int x, int y){
+	public Point(int x, int y){
 		this.x=x;
 		this.y=y;
 	}
@@ -33,14 +33,14 @@ public class Point {
 	}
 	
 	public Point translate(int dx, int dy) {
-		return new Point(dx,dy);
+		return new Point(this.x+dx,this.y+dy);
 	}
 	
-	int getX() {
+	public int getX() {
 		return this.x;
 	}
 	
-	int getY() {
+	public int getY() {
 		return this.y;
 	}
 	

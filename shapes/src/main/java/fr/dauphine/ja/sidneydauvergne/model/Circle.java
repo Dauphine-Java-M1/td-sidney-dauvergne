@@ -1,19 +1,22 @@
-package fr.dauphine.ja.sidneydauvergne.shapes;
+package fr.dauphine.ja.sidneydauvergne.model;
 
 import java.math.*;
+import java.awt.*;
 import java.util.*;
 
-public class Circle {
+import fr.dauphine.ja.sidneydauvergne.view.*;
+
+public class Circle extends Shape implements DrawableCircle{
 	
 	Point centre;
 	int r;
 	
-	Circle(Point c, int r){
+	public Circle(Point c, int r){
 		this.centre=c;
 		this.r=r;
 	}
 	
-	Circle(){
+	public Circle(){
 		this.centre = new Point();
 		this.r=0;
 	}
@@ -26,8 +29,12 @@ public class Circle {
 		this.centre=this.centre.translate(dx,dy);
 	}
 	
-	Point getCenter() {
+	public Point getCenter() {
 		return this.centre;
+	}
+	
+	public int getRayon() {
+		return this.r;
 	}
 	
 	double surface() {
@@ -40,6 +47,12 @@ public class Circle {
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public void paintComponent(Graphics g) {
+		System.out.println("dans circle");
+		g.drawOval(centre.getX(), centre.getY(), r, r);
 	}
 	
 	static boolean contains(Point p, ArrayList<Circle> circles) {

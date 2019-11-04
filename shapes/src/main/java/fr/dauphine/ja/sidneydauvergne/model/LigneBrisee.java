@@ -1,12 +1,15 @@
-package fr.dauphine.ja.sidneydauvergne.shapes;
+package fr.dauphine.ja.sidneydauvergne.model;
 
+import java.awt.Graphics;
 import java.util.*;
 
-public class LigneBrisee {
+import fr.dauphine.ja.sidneydauvergne.view.DrawableLine;
+
+public class LigneBrisee extends Shape implements DrawableLine{
 
 	LinkedList<Point> ligne;
 	
-	LigneBrisee(){
+	public LigneBrisee(){
 		ligne = new LinkedList<Point>();
 	}
 	
@@ -18,7 +21,23 @@ public class LigneBrisee {
 		return res;
 	}
 	
-	void add(Point p) {
+	@Override
+	public void paintComponent(Graphics g) {
+		System.out.println("dans ligne brisee");
+		int n = ligne.size();
+		int i=0;
+		Point p,q;
+		while(i<n-1) {
+			System.out.println("dans while");
+			p = ligne.get(i++);
+			System.out.println(p);
+			q = ligne.get(i);
+			System.out.println(q);
+			g.drawLine(p.getX(), p.getY(), q.getX(), q.getY());
+		}
+	}
+	
+	public void add(Point p) {
 		ligne.add(p);
 	}
 	
