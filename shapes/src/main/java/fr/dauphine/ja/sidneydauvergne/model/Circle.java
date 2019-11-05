@@ -6,7 +6,7 @@ import java.util.*;
 
 import fr.dauphine.ja.sidneydauvergne.view.*;
 
-public class Circle extends Shape implements DrawableCircle{
+public class Circle extends Shape{
 	
 	Point centre;
 	int r;
@@ -22,7 +22,7 @@ public class Circle extends Shape implements DrawableCircle{
 	}
 	
 	public String toString() {
-		return "rayon: "+r+" et centre: "+centre+" surface: "+this.surface();
+		return "Cercle:\n rayon: "+r+" et centre: "+centre+" surface: "+this.surface();
 	}
 	
 	void translate(int dx, int dy) {
@@ -49,12 +49,6 @@ public class Circle extends Shape implements DrawableCircle{
 		return false;
 	}
 	
-	@Override
-	public void paintComponent(Graphics g) {
-		System.out.println("dans circle");
-		g.drawOval(centre.getX(), centre.getY(), r, r);
-	}
-	
 	static boolean contains(Point p, ArrayList<Circle> circles) {
 		for (Circle c: circles) {
 			if (c.contains(p)){
@@ -64,28 +58,33 @@ public class Circle extends Shape implements DrawableCircle{
 		return false;
 	}
 	
+	public void draw(Graphics g) {
+		DrawableCircle d = new DrawableCircle(this);
+		d.paintComponent(g);
+	}
+	
 	public static void main(String[] args) {
-		Point p = new Point(1,2);
-		Circle c1 = new Circle(p,1);
-		//System.out.println(c);
-		
-		Circle c2 = new Circle(p,2);
-		c2.translate(1, 1);
-		
-		System.out.println(c1+" "+c2);
-		
-		Circle c = new Circle(new Point(1,2),1);
-		c.getCenter().translate(1, 1);
-		System.out.println(c);
-		
-		Point p1 = new Point(3,4);
-		Circle c3 = new Circle(new Point(0,0),5);
-		//System.out.println(c3.contains(p1));
-		
-		ArrayList<Circle> circles = new ArrayList<Circle>();
-		circles.add(c1);
-		circles.add(c3);
-		System.out.println(Circle.contains(new Point(1,2),circles));
+//		Point p = new Point(1,2);
+//		Circle c1 = new Circle(p,1);
+//		//System.out.println(c);
+//		
+//		Circle c2 = new Circle(p,2);
+//		c2.translate(1, 1);
+//		
+//		//System.out.println(c1+" "+c2);
+//		
+//		Circle c = new Circle(new Point(1,2),1);
+//		c.getCenter().translate(1, 1);
+//		//System.out.println(c);
+//		
+//		Point p1 = new Point(3,4);
+//		Circle c3 = new Circle(new Point(0,0),5);
+//		//System.out.println(c3.contains(p1));
+//		
+//		ArrayList<Circle> circles = new ArrayList<Circle>();
+//		circles.add(c1);
+//		circles.add(c3);
+//		System.out.println(Circle.contains(new Point(1,2),circles));
 	}
 	
 }

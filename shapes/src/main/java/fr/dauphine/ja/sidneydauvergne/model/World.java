@@ -20,7 +20,7 @@ public class World{
 	public String toString() {
 		String ch = new String();
 		for (Shape s: w) {
-			ch+=s.toString()+" ";
+			ch+=s.toString()+"\n";
 		}
 		return ch;
 	}

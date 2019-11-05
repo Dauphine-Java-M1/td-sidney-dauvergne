@@ -22,7 +22,7 @@ public class Point {
 	}
 	
 	public String toString() {
-		return "("+x+","+y+")";
+		return "Point: ("+x+","+y+")";
 	}
 	
 	boolean isSameAs(Point p) {
@@ -57,17 +57,17 @@ public class Point {
 	
     public static void main( String[] args )
     {
-        Point p1 = new Point(1,2);
-        Point p2=p1;
-        Point p3= new Point(1,2);
-        
-        System.out.println(p1.isSameAs(p2));
-        System.out.println(p1.isSameAs(p3));
-        
-        ArrayList<Point> list = new ArrayList<Point>();
-        list.add(p1);
-        System.out.println(p2.indexOf(list));
-        System.out.println(p3.indexOf(list));
+//        Point p1 = new Point(1,2);
+//        Point p2=p1;
+//        Point p3= new Point(1,2);
+//        
+//        System.out.println(p1.isSameAs(p2));
+//        System.out.println(p1.isSameAs(p3));
+//        
+//        ArrayList<Point> list = new ArrayList<Point>();
+//        list.add(p1);
+//        System.out.println(p2.indexOf(list));
+//        System.out.println(p3.indexOf(list));
         
     }
 }

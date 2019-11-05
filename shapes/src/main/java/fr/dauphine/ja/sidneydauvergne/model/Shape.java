@@ -2,15 +2,16 @@ package fr.dauphine.ja.sidneydauvergne.model;
 
 import java.awt.Graphics;
 
-import fr.dauphine.ja.sidneydauvergne.view.DrawableShape;
+//import java.awt.Graphics;
 
-public abstract class Shape  implements DrawableShape{
+//import fr.dauphine.ja.sidneydauvergne.view.DrawableShape;
+
+public class Shape{
 
 	Point p;
 	
-	public void paintComponent(Graphics g) {
-		System.out.println("dans shape");
-		this.paintComponent(g);
+	public void draw(Graphics g) {
+		
 	}
 	
 }

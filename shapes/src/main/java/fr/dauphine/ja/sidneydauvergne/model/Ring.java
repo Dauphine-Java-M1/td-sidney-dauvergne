@@ -3,6 +3,8 @@ package fr.dauphine.ja.sidneydauvergne.model;
 import java.awt.Graphics;
 import java.util.*;
 
+import fr.dauphine.ja.sidneydauvergne.view.DrawableRing;
+
 public class Ring extends Circle{
 
 	int rayonI;
@@ -30,12 +32,16 @@ public class Ring extends Circle{
 		rayonI=0;
 	}
 	
+	public int getRayonI() {
+		return rayonI;
+	}
+	
 	public boolean equals(Ring a) {
 		return this.centre.isSameAs(a.centre) && this.r==a.r && this.rayonI==a.rayonI;
 	}
 	
 	public String toString() {
-		return new Circle(this.centre,this.r).toString()+" rayon interne: "+rayonI;
+		return "Ring: \n" + new Circle(this.centre,this.r).toString()+" rayon interne: "+rayonI;
 	}
 	
 	boolean contains(Point p) {
@@ -43,17 +49,6 @@ public class Ring extends Circle{
 			return true;
 		}
 		return false;
-	}
-	
-	@Override
-	public void paintComponent(Graphics g) {
-		System.out.println("dans ring");
-		System.out.println("1"+this);
-		int co = (int) Math.cos(45);
-		int si = (int) Math.sin(45);
-		g.drawOval(centre.getX()-co, centre.getY()-si, r, r);
-		System.out.println("2"+this);
-		g.drawOval(centre.getX()-co, centre.getY()-si, rayonI, rayonI);
 	}
 	
 	boolean contains(Point p, ArrayList<Ring> rings) {
@@ -65,18 +60,23 @@ public class Ring extends Circle{
 		return false;
 	}
 	
+	public void draw(Graphics g) {
+		DrawableRing d = new DrawableRing(this);
+		d.paintComponent(g);
+	}
+	
 	public static void main(String[] args) {
-		Point p = new Point(0,0);
-		Ring rg= new Ring(p,5,4);
-		Ring rg1 = new Ring(p,6,7);
-		System.out.println(rg);
-		System.out.println(rg1);
-		
-		ArrayList<Ring> rings = new ArrayList<Ring>();
-		rings.add(rg);
-		rings.add(rg1);
-		System.out.println(rg.contains(new Point(5,3),rings));
-		
+//		Point p = new Point(0,0);
+//		Ring rg= new Ring(p,5,4);
+//		Ring rg1 = new Ring(p,6,7);
+//		System.out.println(rg);
+//		System.out.println(rg1);
+//		
+//		ArrayList<Ring> rings = new ArrayList<Ring>();
+//		rings.add(rg);
+//		rings.add(rg1);
+//		System.out.println(rg.contains(new Point(5,3),rings));
+//		
 		
 	}
 	
