@@ -1,9 +1,24 @@
 package fr.dauphine.ja.sidneydauvergne.view;
 
 import java.awt.Graphics;
+import java.awt.Shape;
 
-public interface DrawableShape {
+public abstract class DrawableShape {
 
-	public void paintComponent(Graphics g);
+	Shape s;
+	
+	public void DrawableShape() {} ;
+	
+	
+	/*public DrawableShape(Shape s) {
+		this.s=s;
+	}
+	
+	public void paintComponent(Graphics g) {
+		System.out.println("dans shape");
+		this.paintComponent(g);
+	}*/
+	
+	public abstract void paintComponent(Graphics g);
 	
 }

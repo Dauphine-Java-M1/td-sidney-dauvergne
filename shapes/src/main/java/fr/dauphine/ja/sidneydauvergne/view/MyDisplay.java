@@ -24,8 +24,8 @@ public class MyDisplay extends JPanel {
 		//g.drawString("Cercle",300,100);
 		
 		for (Shape s: this.world.getW()) {
-			System.out.println("ok");
-			s.paintComponent(g);
+			//System.out.println("ok");
+			s.draw(g);
 		}
 	}
 	
@@ -43,9 +43,9 @@ public class MyDisplay extends JPanel {
 		l.add(p1);
 		l.add(p2);
 		l.add(p3);
-		System.out.println(l);
+		//System.out.println(l);
 		Circle c = new Circle(p1,200);
-		Circle c1= new Circle(p3,200);
+		Circle c1= new Circle(p3,300);
 		Ring r = new Ring(c1,195);
 		world.add(l);
 		world.add(r);
@@ -53,12 +53,8 @@ public class MyDisplay extends JPanel {
 		System.out.println(world);
 		
 		MyDisplay d = new MyDisplay(world);
-		System.out.println("avant add");
-		frame.add(d);
-		
-		
-		
-		
+		//System.out.println("avant add");
+		frame.add(d);		
 		
 	}
 }
