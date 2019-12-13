@@ -28,11 +28,19 @@ public class Panel implements Iterable<Integer>{
 			
 	}
 	
+	public static ArrayList<Integer> panel2(int beginning, int end) {
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		for(int i=beginning;i<=end;i++) {
+			a.add(i);
+		}
+		return a;
+	}
 	
 	public static void main( String[] args ){
 		 Iterator<Integer> it = panel1(3,10); 
-		 for(;it.hasNext();)
-			 System.out.println(it.next());
+		 for(int i:panel2(1,5)) {
+			 System.out.println(i);
+		 }
 	}
 	
 }
